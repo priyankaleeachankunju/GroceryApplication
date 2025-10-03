@@ -15,9 +15,10 @@ public class LoginPage {
 	
 	@FindBy(name="username")WebElement username;
 	@FindBy(name="password")WebElement password;
-	@FindBy(xpath= "//button[text()='Sign In']")WebElement loginBtn;
-	//@FindBy(tagName="button")WebElement loginBtn; 
+	@FindBy(xpath= "//button[text()='Sign In']")WebElement loginBtn; // or @FindBy(tagName="button")WebElement loginBtn; 
 	
+	@FindBy(xpath="//p[text()='Dashboard']")WebElement dashBoard;//Assert True
+	@FindBy(xpath="//b[text()='7rmart supermarket']")WebElement loginTitle;//AssertEquals
 	
 	public void enterUserNameOnUserNameField(String userNameValue) {
 		username.sendKeys(userNameValue);
@@ -29,5 +30,14 @@ public class LoginPage {
 	
 	public void loginButtonClick() {
 		loginBtn.click();
+	}
+	
+	public boolean isDashboardDisplayed() { //Assert True
+		
+		return dashBoard.isDisplayed();
+	}
+	
+	public String isTitleDisplayed() { //Assert Equals
+		return loginTitle.getText();
 	}
 }
