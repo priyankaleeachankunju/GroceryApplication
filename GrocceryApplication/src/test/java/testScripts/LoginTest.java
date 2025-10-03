@@ -22,7 +22,7 @@ public class LoginTest extends Base {
 
 	@Test
 	public void verifyWetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword() throws IOException {
-		String userNameValue = ExcelUtility.readStringData(1, 0, "LoginPage");
+		String userNameValue = ExcelUtility.readStringData(10, 0, "LoginPage");
 		String passwordValue = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserNameOnUserNameField(userNameValue);

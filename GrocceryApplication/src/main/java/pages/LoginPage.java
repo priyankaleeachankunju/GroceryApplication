@@ -16,6 +16,7 @@ public class LoginPage {
 	@FindBy(name="username")WebElement username;
 	@FindBy(name="password")WebElement password;
 	@FindBy(xpath= "//button[text()='Sign In']")WebElement loginBtn;
+	//@FindBy(tagName="button")WebElement loginBtn; 
 	
 	
 	public void enterUserNameOnUserNameField(String userNameValue) {
