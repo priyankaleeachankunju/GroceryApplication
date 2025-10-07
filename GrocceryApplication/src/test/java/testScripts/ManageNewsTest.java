@@ -33,7 +33,9 @@ public class ManageNewsTest extends Base{
  		boolean newscreatedSuccess =mnt.isNewsCreationSuccessAlertDisplayed();
   		System.out.println(newscreatedSuccess);
   		Assert.assertTrue(newscreatedSuccess, "Unable to add new news");
-    	 
+    	
+  		//boolean successNews = mnt.checkNewsCreationSuccessAlertDisplayed();
+		//Assert.assertTrue(successNews, "Unable to add new News");
      }
      
      @Test
