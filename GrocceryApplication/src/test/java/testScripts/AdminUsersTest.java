@@ -95,6 +95,4 @@ public class AdminUsersTest extends Base {
 		Assert.assertFalse(resetHappened,"reset has not happened");
     }
     
-    
-    
 }
