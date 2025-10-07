@@ -15,9 +15,12 @@ public class HomePage {
 	}
 	
 	@FindBy(xpath="//a[@data-toggle='dropdown']")WebElement adminIcon;
-	@FindBy(xpath="//i[@class='ace-icon fa fa-power-off']")WebElement logOut;
+	@FindBy(xpath="//i[@class='ace-icon fa fa-power-off']")WebElement logOut;//or @FindBy(className=" fa-power-off")WebElement logOut; 
+	@FindBy(xpath="//a[@class='small-box-footer']")WebElement adminUsersMoreInfo;
+	// or @FindBy(xpath="//p[text()='Admin Users']/ancestor::div[@class='small-box bg-info']/a") WebElement moreInfolink;
+	@FindBy(xpath="//a[@class='small-box-footer' and contains(@href, 'list-news')]")WebElement manageNewsMoreInfo;
 
-	//@FindBy(className=" fa-power-off")WebElement logOut; 
+	
 	
 	public void adimnIconClick() {
 		adminIcon.click();
@@ -25,5 +28,13 @@ public class HomePage {
 	
 	public void logOutClick() {
 		logOut.click();
+	}
+	
+	public void adminUsersMoreInfoClick() {
+		adminUsersMoreInfo.click();
+	}
+	
+	public void manageNewsMoreInfoClick() {
+		manageNewsMoreInfo.click();
 	}
 }

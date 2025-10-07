@@ -19,6 +19,7 @@ public class LoginPage {
 	
 	@FindBy(xpath="//p[text()='Dashboard']")WebElement dashBoard;//Assert True
 	@FindBy(xpath="//b[text()='7rmart supermarket']")WebElement loginTitle;//AssertEquals
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alertbox;// Assert False(WE of Invalid alert)
 	
 	public void enterUserNameOnUserNameField(String userNameValue) {
 		username.sendKeys(userNameValue);
@@ -39,5 +40,14 @@ public class LoginPage {
 	
 	public String isTitleDisplayed() { //Assert Equals
 		return loginTitle.getText();
+	}
+	
+	public boolean isAlertboxDisplayed() { //Assert False
+		return alertbox.isDisplayed();
+	}
+	
+	public String actualURL()    // AssertEquals using URL check
+	{
+		return driver.getCurrentUrl(); 
 	}
 }

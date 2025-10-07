@@ -2,6 +2,7 @@ package testScripts;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -26,6 +27,12 @@ public class HomeTest extends Base{
 	HomePage homePage = new HomePage(driver);
 	homePage.adimnIconClick();
 	homePage.logOutClick();
+	
+	String expected= "https://groceryapp.uniqassosiates.com/admin/login"; //Assertion
+	String actual= loginpage.actualURL();
+	System.out.println(actual);
+	Assert.assertEquals(actual, expected, "user is unable to logout");
+	//homePage.adminUsersMoreInfoClick();
 
 }
 }

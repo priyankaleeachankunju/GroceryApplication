@@ -46,6 +46,13 @@ public class LoginTest extends Base {
 		loginpage.enterUserNameOnUserNameField(userNameValue);
 		loginpage.enterPasswordOnPasswordField(passwordValue);
 		loginpage.loginButtonClick();
+		
+		//boolean alertBoxDisplayed= loginpage.isAlertboxDisplayed();
+		//Assert.assertTrue(alertBoxDisplayed, "user is able to login with invalid credentials");
+		
+		String expected ="https://groceryapp.uniqassosiates.com/admin/login"; //Assert Equals with URL check 
+		String actual=loginpage.actualURL();
+		Assert.assertEquals(actual, expected,"user is able to login with invalid credentials");
 	}
 	
 	@Test
@@ -55,7 +62,11 @@ public class LoginTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserNameOnUserNameField(userNameValue);
 		loginpage.enterPasswordOnPasswordField(passwordValue);
-		loginpage.loginButtonClick();
+		loginpage.loginButtonClick(); 
+		
+		Boolean alertboxDisplay = loginpage.isAlertboxDisplayed(); //assertFalse
+		System.out.println(alertboxDisplay); 
+		Assert.assertFalse(!alertboxDisplay,"user is able to login with invalid credentials"); // ! = NOT, here false
 	}
 	
 }
