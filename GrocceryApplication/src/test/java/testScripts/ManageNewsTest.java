@@ -53,8 +53,9 @@ public class ManageNewsTest extends Base{
   		mnt.searchNewsText();
   		mnt.searchSubmitBtnClick();
   		
+  		String expected= "News Today";
   		String actual = mnt.isUserListed();
-		Assert.assertEquals(actual, userToSearch, "Searched User is not available in the System!!");
+		Assert.assertEquals(actual,expected,"Searched News is not available in the List");
   		
      }
 	
