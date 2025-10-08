@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-07T18:48:57 IST" name="Default suite" finished-at="2025-10-07T18:49:02 IST" duration-ms="4532">
+  <suite started-at="2025-10-08T13:52:36 IST" name="Suite" finished-at="2025-10-08T13:52:42 IST" duration-ms="6202">
     <groups>
     </groups>
-    <test started-at="2025-10-07T18:48:57 IST" name="Default test" finished-at="2025-10-07T18:49:02 IST" duration-ms="4532">
-      <class name="testScripts.ManageNewsTest">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScripts.ManageNewsTest@7b2bbc3]" started-at="2025-10-07T18:48:57 IST" name="initializeBrowser" finished-at="2025-10-07T18:48:59 IST" duration-ms="2092" status="PASS">
+    <test started-at="2025-10-08T13:52:36 IST" name="Test" finished-at="2025-10-08T13:52:42 IST" duration-ms="6202">
+      <class name="testScripts.LoginTest">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScripts.LoginTest@46d59067]" started-at="2025-10-08T13:52:36 IST" name="initializeBrowser" finished-at="2025-10-08T13:52:40 IST" duration-ms="4538" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserIsAbleToAddNewNews()[pri:0, instance:testScripts.ManageNewsTest@7b2bbc3]" started-at="2025-10-07T18:48:59 IST" name="verifyWhetherUserIsAbleToAddNewNews" finished-at="2025-10-07T18:49:02 IST" duration-ms="2412" status="PASS">
+        <test-method signature="verifyWetherUserIsAbleToLoginWithValidCredentials()[pri:0, instance:testScripts.LoginTest@46d59067]" started-at="2025-10-08T13:52:40 IST" name="verifyWetherUserIsAbleToLoginWithValidCredentials" finished-at="2025-10-08T13:52:42 IST" duration-ms="1624" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherUserIsAbleToAddNewNews -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.ManageNewsTest@7b2bbc3]" started-at="2025-10-07T18:49:02 IST" name="driverQuit" finished-at="2025-10-07T18:49:02 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- verifyWetherUserIsAbleToLoginWithValidCredentials -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTest@46d59067]" started-at="2025-10-08T13:52:42 IST" name="driverQuit" finished-at="2025-10-08T13:52:42 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToAddNewNews status=SUCCESS method=ManageNewsTest.verifyWhetherUserIsAbleToAddNewNews()[pri:0, instance:testScripts.ManageNewsTest@7b2bbc3] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWetherUserIsAbleToLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyWetherUserIsAbleToLoginWithValidCredentials()[pri:0, instance:testScripts.LoginTest@46d59067] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScripts.ManageNewsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testScripts.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

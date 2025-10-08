@@ -34,7 +34,7 @@ public class LoginTest extends Base {
 		
 		String expected ="7rmart supermarket"; //Assert Equals
 		String actual=loginpage.isTitleDisplayed();// A E
-		Assert.assertEquals(actual, expected,"user was able to login with Invalid credentials");// A E
+		Assert.assertEquals(actual,expected,"user was able to login with Invalid credentials");// A E
 	
 	}
 
