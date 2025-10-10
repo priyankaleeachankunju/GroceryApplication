@@ -18,8 +18,8 @@ import utilities.ScreenshotUtility;
 public class Base {
 public WebDriver driver; 
 	
-    @BeforeMethod(alwaysRun=true)
-    @Parameters("browsers")
+    @BeforeMethod(alwaysRun=true) //Grouping
+    @Parameters("browsers")//Parameterization
 	public void initializeBrowser(String browsers) {
     	if (browsers.equalsIgnoreCase("Chrome")) {
     		driver = new ChromeDriver();
