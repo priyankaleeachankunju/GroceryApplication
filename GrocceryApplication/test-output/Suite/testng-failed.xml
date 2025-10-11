@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="browsers" value="Edge"/>
+  <parameter name="browsers" value="Chrome"/>
   <listeners>
     <listener class-name="reportGeneration.Listeners"/>
   </listeners>
@@ -11,10 +11,7 @@
         <methods>
           <include name="verifyWetherUserIsAbleToLoginWithValidUsernameAndInvalidPassword"/>
           <include name="initializeBrowser"/>
-          <include name="verifyWetherUserIsAbleToLoginWithInvalidUsernameAndValidPassword"/>
-          <include name="verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword"/>
           <include name="driverQuit"/>
-          <include name="verifyWetherUserIsAbleToLoginWithValidCredentials"/>
         </methods>
       </class> <!-- testScripts.LoginTest -->
     </classes>
