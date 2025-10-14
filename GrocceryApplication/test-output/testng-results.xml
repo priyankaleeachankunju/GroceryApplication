@@ -1,92 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-11T01:00:37 IST" name="Suite" finished-at="2025-10-11T01:00:43 IST" duration-ms="5191">
+  <suite started-at="2025-10-13T17:47:13 IST" name="Default suite" finished-at="2025-10-13T17:47:13 IST" duration-ms="56">
     <groups>
-      <group name="smoke">
-        <method signature="LoginTest.verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testScripts.LoginTest@21be3395]" name="verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" class="testScripts.LoginTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-10-11T01:00:37 IST" name="Test" finished-at="2025-10-11T01:00:43 IST" duration-ms="5191">
-      <class name="testScripts.LoginTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-11T01:00:37 IST" name="initializeBrowser" finished-at="2025-10-11T01:00:40 IST" duration-ms="2585" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-10-13T17:47:13 IST" name="Default test" finished-at="2025-10-13T17:47:13 IST" duration-ms="56">
+      <class name="testScripts.HomeTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScripts.HomeTest@4afcd809]" started-at="2025-10-13T17:47:13 IST" name="initializeBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1760357833464" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browsers' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
+in C:\Users\PRIYANKA\AppData\Local\Temp\testng-eclipse--959300208\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browsers' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
+in C:\Users\PRIYANKA\AppData\Local\Temp\testng-eclipse--959300208\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-11T01:00:40 IST" name="verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" description="User is trying to login with invalid credential" data-provider="loginProvider" finished-at="2025-10-11T01:00:41 IST" duration-ms="466" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin22]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyWhetherUserIsAbleToLogOutSuccessfully()[pri:0, instance:testScripts.HomeTest@4afcd809]" started-at="2025-10-13T17:47:13 IST" name="verifyWhetherUserIsAbleToLogOutSuccessfully" finished-at="2025-10-13T17:47:13 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browsers' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
+in C:\Users\PRIYANKA\AppData\Local\Temp\testng-eclipse--959300208\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browsers' is required by BeforeMethod on method initializeBrowser but has not been marked @Optional or defined
+in C:\Users\PRIYANKA\AppData\Local\Temp\testng-eclipse--959300208\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-11T01:00:41 IST" name="driverQuit" finished-at="2025-10-11T01:00:41 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testScripts.LoginTest@21be3395] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-11T01:00:41 IST" name="initializeBrowser" finished-at="2025-10-11T01:00:42 IST" duration-ms="1670" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-11T01:00:42 IST" name="verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword" description="User is trying to login with invalid credential" data-provider="loginProvider" finished-at="2025-10-11T01:00:43 IST" duration-ms="431" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-11T01:00:43 IST" name="driverQuit" finished-at="2025-10-11T01:00:43 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword status=SUCCESS method=LoginTest.verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(java.lang.String,java.lang.String)[pri:4, instance:testScripts.LoginTest@21be3395] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.HomeTest@4afcd809]" started-at="2025-10-13T17:47:13 IST" name="driverQuit" finished-at="2025-10-13T17:47:13 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScripts.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- testScripts.HomeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
