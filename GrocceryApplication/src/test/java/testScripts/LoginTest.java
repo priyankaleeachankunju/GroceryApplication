@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Constant;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -21,7 +22,7 @@ public class LoginTest extends Base {
 		loginpage.loginButtonClick();
 		
 		Boolean dashBoardDisplay = loginpage.isDashboardDisplayed(); //Assert True
-		Assert.assertTrue(dashBoardDisplay, "User was unable to Login with valid credentials"); //AssertTrue
+		Assert.assertTrue(dashBoardDisplay,Constant.validCredentialError); //Assertion message Constant class variable
 	}
 
 	@Test(priority=2,description="User is trying to login with invalid credential",retryAnalyzer = retry.Retry.class)

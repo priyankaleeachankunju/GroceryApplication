@@ -27,7 +27,7 @@ public class AdminUsersTest extends Base {
 		
 		 AdminUsersPage aup = new  AdminUsersPage(driver);
 		 
-		 RandomDataUtility random = new RandomDataUtility();
+		 RandomDataUtility random = new RandomDataUtility();//Faker class
 		 String usernameVal =random.createRandomUsername();
 		 String passwordVal= random.createRandomPassword();
 		 
