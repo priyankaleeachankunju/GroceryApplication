@@ -11,9 +11,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.WaitUtility;
+
 public class AdminUsersPage {
         
-	public WebDriver driver;	
+	public WebDriver driver;
+	WaitUtility wait = new WaitUtility();
+	
 	public AdminUsersPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -37,6 +41,8 @@ public class AdminUsersPage {
 	
 	//Assertion
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement newAlert;
+	@FindBy(xpath="//tr[1]/td[1]")WebElement searchUser; 
+	//@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]") WebElement searchUser;
 	
 	public void newButtonClick() {
 		newBtn.click();
@@ -99,9 +105,14 @@ public class AdminUsersPage {
 	
 	public boolean IsresetHappen() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.invisibilityOf(userNameSearch));// invisibility of any element?
+		wait.until(ExpectedConditions.invisibilityOf(userNameSearch));// invisibility of any element
 		return userNameSearch.isDisplayed();
 	}
-	
+	public String searchTable()
+	{
+		
+		wait.waitUntilElementIsVisible(driver, searchUser); // To avoid assertion failure due to invisiblity of searchUser element
+		return searchUser.getText();
+	}
 	
 }

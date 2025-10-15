@@ -19,7 +19,7 @@ public class HomePage {
 	@FindBy(xpath="//a[@class='small-box-footer']")WebElement adminUsersMoreInfo;
 	// or @FindBy(xpath="//p[text()='Admin Users']/ancestor::div[@class='small-box bg-info']/a") WebElement moreInfolink;
 	@FindBy(xpath="//a[@class='small-box-footer' and contains(@href, 'list-news')]")WebElement manageNewsMoreInfo;
-
+	// or //p[text()='Manage News']/ancestor::div[@class='small-box bg-info']/a
 	
 	
 	public void adimnIconClick() {

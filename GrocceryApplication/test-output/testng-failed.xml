@@ -2,12 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browsers" value="Chrome"/>
+  <listeners>
+    <listener class-name="reportGeneration.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="testScripts.AdminUsersTest">
         <methods>
-          <include name="verifyWhetherUserIsAbleToSearchNewlyAddedUser"/>
           <include name="initializeBrowser"/>
+          <include name="verifyWhetherUserIsAbleToSearchNewlyAddedUser"/>
           <include name="driverQuit"/>
         </methods>
       </class> <!-- testScripts.AdminUsersTest -->

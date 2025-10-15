@@ -48,7 +48,7 @@ public WebDriver driver;
     		driver = new EdgeDriver();
     	}
     	
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("url")); //in config.properties file(main/resources)
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));// implicit wait
 	}

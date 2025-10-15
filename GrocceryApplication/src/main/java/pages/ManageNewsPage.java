@@ -9,8 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.WaitUtility;
+
 public class ManageNewsPage {
-	public WebDriver driver;	
+	public WebDriver driver;
+	WaitUtility wait = new WaitUtility();
+	
 	public ManageNewsPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -23,10 +27,13 @@ public class ManageNewsPage {
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")WebElement searchBtn;
 	@FindBy(xpath="//input[@type='text']")WebElement searchText;
 	@FindBy(xpath="//button[@type='submit']")WebElement searchSubmitBtn;
+	
 	//Assertion
 	@FindBy(xpath = "//div[contains(@class, 'alert-success')]")WebElement newsCreationSuccessMsg;
-	@FindBy(xpath = "//tr[1]/td[1]")WebElement searchResultTable;
+	//@FindBy(xpath="//div[contains(@class,'alert') and contains(@class,'alert-dismissible')]") WebElement alertbox;
 	
+	@FindBy(xpath = "//tr[1]/td[1]")WebElement searchResultTable;
+	//or @FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]") WebElement searchResultTable;
 	
 	public void newBtnClick() {
 		newButton.click();
@@ -56,8 +63,10 @@ public class ManageNewsPage {
 		return newsCreationSuccessMsg.isDisplayed();
 	}
 	public String isUserListed() {
+		wait.waitUntilElementIsVisible(driver, searchResultTable); // To avoid assertion failure due to invisiblity of searchUser element
 		return searchResultTable.getText();
 	}
+	
 	
 	/*public boolean checkNewsCreationSuccessAlertDisplayed() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

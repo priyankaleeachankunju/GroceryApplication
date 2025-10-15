@@ -10,6 +10,7 @@ public class Constant {
 	
 	public static final String TestDataFile = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx";
 	
+	
 	public static final String validCredentialError ="User was unable to Login with valid credentials";
 	
 	public static final String InValidPasswordError = "User was able to login with invalid Password";
@@ -18,17 +19,17 @@ public class Constant {
 	
     public static final String InValidCredentialError = "User was able to login with invalid credentials";
 	
-	
+	//HomeTest
 	public static final String LogOutError= "User was unable to logout";
 	
-	
+	//AdminUsersTest
 	public static final String UserNotAddedError = "Error in adding User";
 	
 	public static final String UnabletoSearchError = "Error in Searching User";
 	
 	public static final String UnAbletoResetError = "Error in resetting page";
 	
-	
+	//ManageNewsTest
 	public static final String UnabletoAddNewsError = "Error in Adding News";
 	
 	public static final String UnabletoSearchNewsError = "Error in Searching News";

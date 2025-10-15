@@ -65,12 +65,16 @@ public class AdminUsersTest extends Base {
 		aup.searchUserBtnClick();
 		
 		//Assertion
-		//String expected="https://groceryapp.uniqassosiates.com/admin/user/index?un=&ut=&Search=sr"; (after searchBtn click url)
+		/*String expected="https://groceryapp.uniqassosiates.com/admin/user/index?un=&ut=&Search=sr"; (after searchBtn click url)
 		String actual= aup.actualURL();
-		System.out.println(actual);
 		boolean val= actual.contains("Search=sr");
 		System.out.println(val);
-		Assert.assertTrue(val,Constant.UnabletoSearchError); // Error
+		Assert.assertTrue(val,Constant.UnabletoSearchError)*/
+		
+		String expected="pla";
+		String actual= aup.searchTable(); //wait applied 
+		System.out.println(actual);
+		Assert.assertEquals(actual,expected,Constant.UnabletoSearchError); 
     }
     
     @Test

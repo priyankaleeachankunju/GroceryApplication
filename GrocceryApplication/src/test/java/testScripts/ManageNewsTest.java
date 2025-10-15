@@ -33,7 +33,7 @@ public class ManageNewsTest extends Base{
  		
  		boolean newscreatedSuccess =mnt.isNewsCreationSuccessAlertDisplayed();
   		System.out.println(newscreatedSuccess);
-  		Assert.assertTrue(newscreatedSuccess,Constant.UnabletoAddNewsError);
+  		Assert.assertTrue(newscreatedSuccess,Constant.UnabletoAddNewsError); //true
     	
   		//boolean successNews = mnt.checkNewsCreationSuccessAlertDisplayed();
 		//Assert.assertTrue(successNews, "Unable to add new News");
@@ -57,8 +57,8 @@ public class ManageNewsTest extends Base{
   		mnt.searchSubmitBtnClick();
   		
   		String expected= "News Today";
-  		String actual = mnt.isUserListed();
-		Assert.assertEquals(actual,expected,Constant.UnabletoSearchNewsError);
+  		String actual = mnt.isUserListed();//wait applied
+		Assert.assertEquals(actual,expected,Constant.UnabletoSearchNewsError); 
   		
      }
 	
