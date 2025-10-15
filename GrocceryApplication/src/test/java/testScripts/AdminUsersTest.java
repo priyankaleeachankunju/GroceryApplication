@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Constant;
 import pages.AdminUsersPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -41,7 +42,7 @@ public class AdminUsersTest extends Base {
 		 //String expected= "×\r\n"+ "Alert!\r\n"+ "User Created Successfully";
 		 String actual= aup.alertDisplayed();
 		 //System.out.println(admin.AlertDisplayed());
-		 Assert.assertTrue(actual.contains("User Created Successfully"),"User not added successfully");
+		 Assert.assertTrue(actual.contains("User Created Successfully"),Constant.UserNotAddedError);
 		 
 	}
     
@@ -69,7 +70,7 @@ public class AdminUsersTest extends Base {
 		System.out.println(actual);
 		boolean val= actual.contains("Search=sr");
 		System.out.println(val);
-		Assert.assertTrue(val,"search not happened");
+		Assert.assertTrue(val,Constant.UnabletoSearchError); // Error
     }
     
     @Test
@@ -92,7 +93,7 @@ public class AdminUsersTest extends Base {
 		
 		boolean resetHappened= aup.IsresetHappen(); //Assertion
 		System.out.println(resetHappened);
-		Assert.assertFalse(resetHappened,"reset has not happened");
+		Assert.assertFalse(resetHappened,Constant.UnAbletoResetError);
     }
     
 }

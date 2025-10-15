@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageNewsPage;
@@ -32,7 +33,7 @@ public class ManageNewsTest extends Base{
  		
  		boolean newscreatedSuccess =mnt.isNewsCreationSuccessAlertDisplayed();
   		System.out.println(newscreatedSuccess);
-  		Assert.assertTrue(newscreatedSuccess, "Unable to add new news");
+  		Assert.assertTrue(newscreatedSuccess,Constant.UnabletoAddNewsError);
     	
   		//boolean successNews = mnt.checkNewsCreationSuccessAlertDisplayed();
 		//Assert.assertTrue(successNews, "Unable to add new News");
@@ -57,7 +58,7 @@ public class ManageNewsTest extends Base{
   		
   		String expected= "News Today";
   		String actual = mnt.isUserListed();
-		Assert.assertEquals(actual,expected,"Searched News is not available in the List");
+		Assert.assertEquals(actual,expected,Constant.UnabletoSearchNewsError);
   		
      }
 	

@@ -34,9 +34,9 @@ public class LoginTest extends Base {
 		loginpage.enterPasswordOnPasswordField(passwordValue);
 		loginpage.loginButtonClick();
 		
-		//String expected ="7rmart supermarket"; //Assert Equals
-		//String actual=loginpage.isTitleDisplayed();// A E
-		//Assert.assertEquals(actual,expected,"user was able to login with Invalid credentials");// A E
+		String expected ="7rmart supermarket"; //Assert Equals
+		String actual=loginpage.isTitleDisplayed();// A E
+		Assert.assertEquals(actual,expected,Constant.InValidPasswordError);// A E
 	
 	}
 
@@ -54,7 +54,7 @@ public class LoginTest extends Base {
 		
 		String expected ="https://groceryapp.uniqassosiates.com/admin/login"; //Assert Equals with URL check 
 		String actual=loginpage.actualURL();
-		Assert.assertEquals(actual, expected,"user is able to login with invalid credentials");
+		Assert.assertEquals(actual, expected,Constant.InValidUsernameError);
 	}
 	
 	@Test(priority=4,description="User is trying to login with invalid credential",groups= {"smoke"},dataProvider ="loginProvider")
@@ -68,7 +68,7 @@ public class LoginTest extends Base {
 		
 		Boolean alertboxDisplay = loginpage.isAlertboxDisplayed(); //assertFalse
 		System.out.println(alertboxDisplay); 
-		Assert.assertFalse(!alertboxDisplay,"user is able to login with invalid credentials"); // ! = NOT, here false
+		Assert.assertFalse(!alertboxDisplay,Constant.InValidCredentialError); // ! = NOT, here false
 	}
 	@DataProvider(name = "loginProvider")
 	public Object[][] getDataFromDataProvider() throws IOException {
