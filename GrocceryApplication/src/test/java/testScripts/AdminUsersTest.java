@@ -35,7 +35,7 @@ public class AdminUsersTest extends Base {
 		 aup.newButtonClick();
 		 aup.enterUserName(usernameVal);
 		 aup.enterPassword(passwordVal);
-		 aup.selectUserType();
+		 aup.selectUserType();//Page utility used
 		 aup.saveButtonClick();
 		 
 		 //Assertion
@@ -61,7 +61,7 @@ public class AdminUsersTest extends Base {
 		AdminUsersPage aup = new  AdminUsersPage(driver);
 		aup.searchBtnClick();
 		aup.searchUserName();
-		aup.searchUserType();
+		aup.searchUserType();//Page utility used
 		aup.searchUserBtnClick();
 		
 		//Assertion

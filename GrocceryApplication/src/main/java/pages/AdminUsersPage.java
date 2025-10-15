@@ -11,12 +11,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.PageUtility;
 import utilities.WaitUtility;
 
 public class AdminUsersPage {
         
 	public WebDriver driver;
 	WaitUtility wait = new WaitUtility();
+	PageUtility pageUtil = new PageUtility();
 	
 	public AdminUsersPage(WebDriver driver) {
 		this.driver=driver;
@@ -57,9 +59,9 @@ public class AdminUsersPage {
 	
 	public void selectUserType() {
 		
-	Select select = new Select(userType);
-	select.selectByValue("staff"); // by index dbt
-		
+	//Select select = new Select(userType);
+	//select.selectByValue("staff"); // by index dbt
+	   pageUtil.selectDropdownWithValue(userType,"staff"); //used Page Utility
 	}
 	
 	public void saveButtonClick() {
@@ -75,8 +77,9 @@ public class AdminUsersPage {
 	}
 	
 	public void searchUserType() {
-		Select select = new Select(userTypeSearch);
-		select.selectByValue("staff"); 
+		//Select select = new Select(userTypeSearch);
+		//select.selectByValue("staff"); 
+		pageUtil.selectDropdownWithValue(userTypeSearch,"staff"); //used Page Utility
 	}
 	
 	public void searchUserBtnClick(){

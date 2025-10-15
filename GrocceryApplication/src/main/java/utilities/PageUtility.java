@@ -54,7 +54,7 @@ public class PageUtility {
 		actions.dragAndDrop(drag, drop).build().perform();
 	}
 	
-	//Click element safely
+	//Click element safely (not used)
     public static void clickElement(WebDriver driver, WebElement element) {
         element.click();
     }
