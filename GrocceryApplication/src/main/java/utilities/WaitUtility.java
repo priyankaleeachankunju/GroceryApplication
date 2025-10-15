@@ -11,7 +11,7 @@ public class WaitUtility {
 	
 	public static int EXPLICITWAIT=5; 
 	
-	// Wait until element is clickable
+	// Wait until element is clickable(used in Loginpage Loginbutton click)
 	public void waitUntilElementToBeClickable(WebDriver driver, WebElement element) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));

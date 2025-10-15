@@ -2,12 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-15T22:04:11 IST" name="Suite" finished-at="2025-10-15T22:04:17 IST" duration-ms="5750">
+  <suite started-at="2025-10-15T22:43:57 IST" name="Suite" finished-at="2025-10-15T22:44:02 IST" duration-ms="4596">
     <groups>
+      <group name="smoke">
+        <method signature="LoginTest.verifyWetherUserIsAbleToLoginWithValidCredentials()[pri:1, instance:testScripts.LoginTest@21be3395]" name="verifyWetherUserIsAbleToLoginWithValidCredentials" class="testScripts.LoginTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-10-15T22:04:11 IST" name="Test" finished-at="2025-10-15T22:04:17 IST" duration-ms="5750">
-      <class name="testScripts.ManageNewsTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScripts.ManageNewsTest@49c90a9c]" started-at="2025-10-15T22:04:11 IST" name="initializeBrowser" finished-at="2025-10-15T22:04:13 IST" duration-ms="2012" status="PASS">
+    <test started-at="2025-10-15T22:43:57 IST" name="Test" finished-at="2025-10-15T22:44:02 IST" duration-ms="4596">
+      <class name="testScripts.LoginTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-15T22:43:57 IST" name="initializeBrowser" finished-at="2025-10-15T22:43:59 IST" duration-ms="2220" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +21,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserIsAbleToSearchAddedNews()[pri:0, instance:testScripts.ManageNewsTest@49c90a9c]" started-at="2025-10-15T22:04:13 IST" name="verifyWhetherUserIsAbleToSearchAddedNews" finished-at="2025-10-15T22:04:17 IST" duration-ms="3692" status="PASS">
+        <test-method signature="verifyWetherUserIsAbleToLoginWithValidCredentials()[pri:1, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-15T22:43:59 IST" name="verifyWetherUserIsAbleToLoginWithValidCredentials" description="User is trying to login with valid credentials" finished-at="2025-10-15T22:44:02 IST" duration-ms="2311" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherUserIsAbleToSearchAddedNews -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.ManageNewsTest@49c90a9c]" started-at="2025-10-15T22:04:17 IST" name="driverQuit" finished-at="2025-10-15T22:04:17 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyWetherUserIsAbleToLoginWithValidCredentials -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTest@21be3395]" started-at="2025-10-15T22:44:02 IST" name="driverQuit" finished-at="2025-10-15T22:44:02 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToSearchAddedNews status=SUCCESS method=ManageNewsTest.verifyWhetherUserIsAbleToSearchAddedNews()[pri:0, instance:testScripts.ManageNewsTest@49c90a9c] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWetherUserIsAbleToLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyWetherUserIsAbleToLoginWithValidCredentials()[pri:1, instance:testScripts.LoginTest@21be3395] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScripts.ManageNewsTest -->
+      </class> <!-- testScripts.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

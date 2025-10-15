@@ -59,13 +59,13 @@ public class PageUtility {
         element.click();
     }
 
-    //Enter text into input box
+    //Enter text into input box(not used)
     public static void enterText(WebDriver driver, WebElement element, String text) {
         element.clear();
         element.sendKeys(text);
     }
 
-    //Get element text
+    //Get element text(not used)
     public static String getElementText(WebDriver driver, WebElement element) {
         return element.getText();
     }
@@ -74,6 +74,9 @@ public class PageUtility {
     public String getCurrentURL(WebDriver driver) {
         return driver.getCurrentUrl();
     }
-	
-	
+	//checkbox
+    public boolean isCheckboxSelected(WebElement checkbox) {
+
+		return checkbox.isSelected();
+	}
 }

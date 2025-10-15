@@ -12,6 +12,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
+	
 	@Test(priority=1,description="User is trying to login with valid credentials",groups= {"smoke"})
 	public void verifyWetherUserIsAbleToLoginWithValidCredentials() throws IOException {
 		String userNameValue = ExcelUtility.readStringData(0, 0, "LoginPage");
