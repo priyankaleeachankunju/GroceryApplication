@@ -21,20 +21,29 @@ public class HomePage {
 	@FindBy(xpath="//a[@class='small-box-footer' and contains(@href, 'list-news')]")WebElement manageNewsMoreInfo;
 	// or //p[text()='Manage News']/ancestor::div[@class='small-box bg-info']/a
 	
-	
-	public void adimnIconClick() {
+	/*public void adimnIconClick() {
 		adminIcon.click();
+	}*/
+	public HomePage adimnIconClick() {  //chaining
+		adminIcon.click();
+		return this;
 	}
 	
-	public void logOutClick() {
+	/*public void logOutClick() {
 		logOut.click();
+	}*/
+	public LoginPage logOutClick() { //chaining
+		logOut.click();
+		return new LoginPage(driver);
 	}
 	
-	public void adminUsersMoreInfoClick() {
+	public AdminUsersPage adminUsersMoreInfoClick() {
 		adminUsersMoreInfo.click();
+		return new AdminUsersPage(driver);
 	}
 	
-	public void manageNewsMoreInfoClick() {
+	public ManageNewsPage manageNewsMoreInfoClick() {
 		manageNewsMoreInfo.click();
+		return new ManageNewsPage(driver);
 	}
 }

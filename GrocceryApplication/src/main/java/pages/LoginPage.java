@@ -25,20 +25,24 @@ public class LoginPage {
 	@FindBy(xpath="//b[text()='7rmart supermarket']")WebElement loginTitle;//AssertEquals
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alertbox;// Assert False(WE of Invalid alert)
 	
-	public void enterUserNameOnUserNameField(String userNameValue) {
+	public LoginPage enterUserNameOnUserNameField(String userNameValue) { // chaining: void--->LoginPage(classname)
 		username.sendKeys(userNameValue);
+		return this; // added as it will be in same page
 	}
 	
-	public void enterPasswordOnPasswordField(String passwordValue) {
+	public LoginPage enterPasswordOnPasswordField(String passwordValue) {
 		password.sendKeys(passwordValue);
+		return this;
 	}
 	
-	public void loginButtonClick() {
+	public HomePage loginButtonClick() { // chaining: void--->HomePage(class) as it navigates from login to home page
 		
 		wait.waitUntilElementToBeClickable(driver, loginBtn); //wait applied
 		loginBtn.click();
+		return new HomePage(driver);//added: driver control transfer from login to HomePage
 	}
 	
+	//Assertion Methods
 	public boolean isDashboardDisplayed() { //Assert True
 		
 		return dashBoard.isDisplayed();
@@ -49,7 +53,7 @@ public class LoginPage {
 	}
 	
 	public boolean isAlertboxDisplayed() { //Assert False
-		return alertbox.isDisplayed();
+		return alertbox.isDisplayed(); 
 	}
 	
 	public String actualURL()    // AssertEquals using URL check

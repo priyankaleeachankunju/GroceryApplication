@@ -17,7 +17,7 @@ public class WaitUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
-	 // Wait until element is visible (used in Assertion: AdminUsersPage and ManageNewsPage)
+	 // Wait until element is visible (used in Assertion: AdminUsersPage(2) and ManageNewsPage)
 	public void waitUntilElementIsVisible(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.visibilityOf(element));

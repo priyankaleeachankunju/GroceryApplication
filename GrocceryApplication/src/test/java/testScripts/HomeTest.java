@@ -13,21 +13,19 @@ import utilities.ExcelUtility;
 
 public class HomeTest extends Base{
 	
+	HomePage homePage;
+	
 	@Test
 	public void verifyWhetherUserIsAbleToLogOutSuccessfully() throws IOException {
 	String userNameValue = ExcelUtility.readStringData(0, 0, "LoginPage");
 	String passwordValue = ExcelUtility.readStringData(0, 1, "LoginPage");
 	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUserNameOnUserNameField(userNameValue);
-	loginpage.enterPasswordOnPasswordField(passwordValue);
-	loginpage.loginButtonClick();
+	loginpage.enterUserNameOnUserNameField(userNameValue).enterPasswordOnPasswordField(passwordValue);
+	homePage=loginpage.loginButtonClick();
 		
-	//LoginTest test = new LoginTest();
-	//test.verifyWetherUserIsAbleToLoginWithValidCredentials();
-	
-	HomePage homePage = new HomePage(driver);
+	//HomePage homePage = new HomePage(driver);
 	homePage.adimnIconClick();
-	homePage.logOutClick();
+	loginpage=homePage.logOutClick();
 	
 	String expected= "https://groceryapp.uniqassosiates.com/admin/login"; //Assertion
 	String actual= loginpage.actualURL();
@@ -37,3 +35,15 @@ public class HomeTest extends Base{
 
 }
 }
+/* Before chaining
+LoginPage loginpage = new LoginPage(driver);
+loginpage.enterUserNameOnUserNameField(userNameValue);
+loginpage.enterPasswordOnPasswordField(passwordValue);
+loginpage.loginButtonClick();
+	
+//Dbt LoginTest test = new LoginTest();
+//test.verifyWetherUserIsAbleToLoginWithValidCredentials();
+
+HomePage homePage = new HomePage(driver);
+homePage.adimnIconClick();
+homePage.logOutClick();*/

@@ -2,6 +2,8 @@ package pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,27 +37,33 @@ public class ManageNewsPage {
 	@FindBy(xpath = "//tr[1]/td[1]")WebElement searchResultTable;
 	//or @FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]") WebElement searchResultTable;
 	
-	public void newBtnClick() {
+	public ManageNewsPage newBtnClick() {
 		newButton.click();
+		return this;
 	}
 	
-	public void newsTextBoxMsg() {
+	public ManageNewsPage newsTextBoxMsg() {
 		newsTextBox.sendKeys("News Today");
+		return this;
 	}
-	public void saveBtnClick() {
+	public ManageNewsPage saveBtnClick() {
 		saveBtn.click();
+		return this;
 	}
 	
-	public void searchBtnClick() {
+	public ManageNewsPage searchBtnClick() {
 		searchBtn.click();
+		return this;
 	}
 	
-	public void searchNewsText() {
+	public ManageNewsPage searchNewsText() {
 		searchText.sendKeys("News Today");
+		return this;
 	}
 	
-	public void searchSubmitBtnClick() {
+	public ManageNewsPage searchSubmitBtnClick() {
 		searchSubmitBtn.click();
+		return this;
 	}
 	
 	//Assertion
@@ -63,8 +71,20 @@ public class ManageNewsPage {
 		return newsCreationSuccessMsg.isDisplayed();
 	}
 	public String isUserListed() {
-		wait.waitUntilElementIsVisible(driver, searchResultTable); // To avoid assertion failure due to invisiblity of searchUser element
-		return searchResultTable.getText();
+		String userlisted=null;
+		try {
+			
+			wait.waitUntilElementIsVisible(driver, searchResultTable); // To avoid assertion failure due to invisiblity of searchUser element
+			userlisted = searchResultTable.getText();
+			
+	    } catch (StaleElementReferenceException e) {
+	        // Re-locate the element if it becomes stale
+	    	//@FindBy(xpath = "//tr[1]/td[1]")WebElement searchResultTable;
+	       WebElement element = driver.findElement(By.xpath("//tr[1]/td[1]"));
+	       userlisted = element.getText();
+	    }
+		 return userlisted;
+		//return searchResultTable.getText();
 	}
 	
 	

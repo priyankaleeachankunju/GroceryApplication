@@ -45,59 +45,72 @@ public class AdminUsersPage {
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement newAlert;
 	@FindBy(xpath="//tr[1]/td[1]")WebElement searchUser; 
 	//@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]") WebElement searchUser;
+	@FindBy(xpath="//div[contains(@class,'alert') and contains(@class,'alert-dismissible')]") WebElement alertbox;
 	
-	public void newButtonClick() {
+	public AdminUsersPage newButtonClick() {
 		newBtn.click();
+		return this;
 	}
-	public void enterUserName(String usernameVal) {
+	public AdminUsersPage enterUserName(String usernameVal) {
 		userName.sendKeys(usernameVal);
+		return this;
 	}
 	
-	public void enterPassword(String passwordVal) {
+	public AdminUsersPage enterPassword(String passwordVal) {
 		passWord.sendKeys(passwordVal);
+		return this;
 	}
 	
-	public void selectUserType() {
+	public AdminUsersPage selectUserType() {
 		
 	//Select select = new Select(userType);
 	//select.selectByValue("staff"); // by index dbt
 	   pageUtil.selectDropdownWithValue(userType,"staff"); //used Page Utility
+	   return this;
 	}
 	
-	public void saveButtonClick() {
+	public AdminUsersPage saveButtonClick() {
 		saveBtn.click();
+		return this;
 	}
 	
-	public void searchBtnClick() { //search
+	//search methods
+	public AdminUsersPage searchBtnClick() { //search
 		searchBtn.click();
+		return this;
 	}
 	
-	public void searchUserName() {
+	public AdminUsersPage searchUserName() {
 		userNameSearch.sendKeys("pla");
+		return this;
 	}
 	
-	public void searchUserType() {
+	public AdminUsersPage searchUserType() {
 		//Select select = new Select(userTypeSearch);
 		//select.selectByValue("staff"); 
 		pageUtil.selectDropdownWithValue(userTypeSearch,"staff"); //used Page Utility
+		return this;
 	}
 	
-	public void searchUserBtnClick(){
+	public AdminUsersPage searchUserBtnClick(){
 		srchBtn.click();
+		return this;
 		
 	}
 	
-	public void resetBtnClick() {
+	public AdminUsersPage resetBtnClick() {
 		restBtn.click();
+		return this;
 	}
 	
 	//Assertion methods
 	public String alertDisplayed() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement alertBox = wait.until(ExpectedConditions.visibilityOfElementLocated( //visibility .. here element?
-		    By.xpath("//div[contains(@class,'alert') and contains(@class,'alert-dismissible')]") // bcoz alert can be 'added successfully' or 'already registered'
-		));
-		return alertBox.getText(); 
+		wait.waitUntilElementIsVisible(driver, alertbox);
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//WebElement alertBox = wait.until(ExpectedConditions.visibilityOfElementLocated( //visibility .. here element
+		// By.xpath("//div[contains(@class,'alert') and contains(@class,'alert-dismissible')]") // bcoz alert can be 'added successfully' or 'already registered'
+		//));
+		return alertbox.getText(); 
 		
 	}
 	
@@ -107,9 +120,11 @@ public class AdminUsersPage {
 	}
 	
 	public boolean IsresetHappen() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.invisibilityOf(userNameSearch));// invisibility of any element
-		return userNameSearch.isDisplayed();
+		 wait.waitUntilElementIsInvisible(driver, userNameSearch); //wait utility applied
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		//wait.until(ExpectedConditions.invisibilityOf(userNameSearch));// invisibility of any element
+		//return userNameSearch.isDisplayed();
+		 return userNameSearch.isDisplayed();
 	}
 	public String searchTable()
 	{
