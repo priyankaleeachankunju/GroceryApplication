@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-17T00:44:14 IST" name="Suite" finished-at="2025-10-17T00:44:20 IST" duration-ms="5854">
+  <suite started-at="2025-10-17T20:12:32 IST" name="Suite" finished-at="2025-10-17T20:12:39 IST" duration-ms="6821">
     <groups>
     </groups>
-    <test started-at="2025-10-17T00:44:14 IST" name="Test" finished-at="2025-10-17T00:44:20 IST" duration-ms="5854">
-      <class name="testScripts.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScripts.HomeTest@d23e042]" started-at="2025-10-17T00:44:14 IST" name="initializeBrowser" finished-at="2025-10-17T00:44:17 IST" duration-ms="2921" status="PASS">
+    <test started-at="2025-10-17T20:12:32 IST" name="Test" finished-at="2025-10-17T20:12:39 IST" duration-ms="6821">
+      <class name="testScripts.AdminUsersTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScripts.AdminUsersTest@2d0399f4]" started-at="2025-10-17T20:12:32 IST" name="initializeBrowser" finished-at="2025-10-17T20:12:34 IST" duration-ms="2029" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherUserIsAbleToLogOutSuccessfully()[pri:0, instance:testScripts.HomeTest@d23e042]" started-at="2025-10-17T00:44:17 IST" name="verifyWhetherUserIsAbleToLogOutSuccessfully" finished-at="2025-10-17T00:44:20 IST" duration-ms="2879" status="PASS">
+        <test-method signature="verifyWhetherUserIsAbleToResetUsersList()[pri:0, instance:testScripts.AdminUsersTest@2d0399f4]" started-at="2025-10-17T20:12:34 IST" name="verifyWhetherUserIsAbleToResetUsersList" finished-at="2025-10-17T20:12:39 IST" duration-ms="4747" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherUserIsAbleToLogOutSuccessfully -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.HomeTest@d23e042]" started-at="2025-10-17T00:44:20 IST" name="driverQuit" finished-at="2025-10-17T00:44:20 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyWhetherUserIsAbleToResetUsersList -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScripts.AdminUsersTest@2d0399f4]" started-at="2025-10-17T20:12:39 IST" name="driverQuit" finished-at="2025-10-17T20:12:39 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToLogOutSuccessfully status=SUCCESS method=HomeTest.verifyWhetherUserIsAbleToLogOutSuccessfully()[pri:0, instance:testScripts.HomeTest@d23e042] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToResetUsersList status=SUCCESS method=AdminUsersTest.verifyWhetherUserIsAbleToResetUsersList()[pri:0, instance:testScripts.AdminUsersTest@2d0399f4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScripts.HomeTest -->
+      </class> <!-- testScripts.AdminUsersTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

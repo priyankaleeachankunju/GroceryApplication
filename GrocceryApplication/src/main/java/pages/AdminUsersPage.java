@@ -46,6 +46,7 @@ public class AdminUsersPage {
 	@FindBy(xpath="//tr[1]/td[1]")WebElement searchUser; 
 	//@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]") WebElement searchUser;
 	@FindBy(xpath="//div[contains(@class,'alert') and contains(@class,'alert-dismissible')]") WebElement alertbox;
+	@FindBy(xpath="//h4[text()='Search Admin Users']")WebElement searchTab; //Title name used as userNameSearch-data may still be there after reset
 	
 	public AdminUsersPage newButtonClick() {
 		newBtn.click();
@@ -120,11 +121,11 @@ public class AdminUsersPage {
 	}
 	
 	public boolean IsresetHappen() {
-		 wait.waitUntilElementIsInvisible(driver, userNameSearch); //wait utility applied
+		 wait.waitUntilElementIsInvisible(driver, searchTab); //wait utility applied
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		//wait.until(ExpectedConditions.invisibilityOf(userNameSearch));// invisibility of any element
 		//return userNameSearch.isDisplayed();
-		 return userNameSearch.isDisplayed();
+		 return searchTab.isDisplayed();
 	}
 	public String searchTable()
 	{
