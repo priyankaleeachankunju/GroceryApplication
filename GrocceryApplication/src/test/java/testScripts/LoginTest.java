@@ -66,7 +66,7 @@ public class LoginTest extends Base {
 		Assert.assertEquals(actual, expected,Constant.InValidUsernameError);
 	}
 	
-	@Test(priority=4,description="User is trying to login with invalid credential",groups= {"smoke"},dataProvider ="loginProvider")
+	@Test(priority=4,description="User is trying to login with invalid credentials",groups= {"smoke"},dataProvider ="loginProvider")
 	public void verifyWetherUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword(String userNameValue,String passwordValue) throws IOException {
 		//String userNameValue = ExcelUtility.readStringData(3, 0, "LoginPage");
 		//String passwordValue = ExcelUtility.readStringData(3, 1, "LoginPage");

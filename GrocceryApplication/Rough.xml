@@ -9,16 +9,18 @@
 		<classes>
 
 			<class name="testScripts.AdminUsersTest">
+			<!--
                <methods>
                   <include name="verifyWhetherUserIsAbleToResetUsersList"></include>
                </methods> 
+               -->
 			</class>
-			<!--
+			
 			<class name="testScripts.HomeTest"></class>
 			<class name="testScripts.AdminUsersTest"></class>
-			<class name="testScripts.ManageNewsTest"></class> -->
-
-		</classes>
+			<class name="testScripts.ManageNewsTest"></class> 
+            
+	</classes> 
 	</test> <!--
 	Test -->
 </suite> <!--

@@ -9,10 +9,14 @@
 		<classes>
 
 			<class name="testScripts.HomeTest">
-               <methods>
+              <!-- <methods>
                   <include name="verifyWhetherUserIsAbleToLogOutSuccessfully"></include>
-               </methods>
+               </methods> -->
 			</class>
+			
+			<class name="testScripts.HomeTest"></class>
+			<class name="testScripts.AdminUsersTest"></class>
+			<class name="testScripts.ManageNewsTest"></class> 
 
 		</classes>
 	</test> <!--
